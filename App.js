@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import reactDom from 'react-dom';
 import { View } from 'react-native';
 
 import * as Location from 'expo-location';
@@ -8,9 +7,10 @@ import { ActivityIndicator } from 'react-native-web';
 import { Fontisto } from '@expo/vector-icons';
 import { styled } from 'styled-components/native';
 
-  
 
-  const icons = {
+const APIkey = '7f18591517ca453e88f2973c07a8e9ab'
+
+const icons = {
     Clouds:"cloudy",
     Clear:"day-sunny",
     Atmosphere:"cloudy-gusts",
@@ -18,7 +18,7 @@ import { styled } from 'styled-components/native';
     Rain:"rains",
     Drizzle:"drizzle",
     Thunderstorm:"ligthning"
-  }
+}
 
 const CloudsImage = require('./assets/cloudy.png');
 const ClearImage = require('./assets/day-sunny.png');
@@ -93,7 +93,6 @@ const WeatherSubText = styled(WeatherMainText)`
 
 
 const StyledIcon = styled.View`
-  
 `;
  
 const App = () => {
